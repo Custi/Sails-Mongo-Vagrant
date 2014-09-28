@@ -19,6 +19,8 @@ class Homestead
     config.vm.network "forwarded_port", guest: 80, host: 8000
     config.vm.network "forwarded_port", guest: 3306, host: 33060
     config.vm.network "forwarded_port", guest: 5432, host: 54320
+    config.vm.network "forwarded_port", guest: 1337, host: 1337   # Sails
+    config.vm.network "forwarded_port", guest: 27017, host: 27017   # MongoDB
 
     # Configure The Public Key For SSH Access
     config.vm.provision "shell" do |s|

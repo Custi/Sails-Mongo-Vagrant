@@ -43,6 +43,7 @@ class Homestead
     end
     
     config.vm.provision "shell", path: "mongodb.sh"
+    config.vm.provision "shell", path: "sails.sh"
 
     # Register All Of The Configured Shared Folders
     settings["folders"].each do |folder|

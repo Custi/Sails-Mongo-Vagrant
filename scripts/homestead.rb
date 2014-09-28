@@ -42,8 +42,8 @@ class Homestead
       s.inline = "cp /vagrant/aliases /home/vagrant/.bash_aliases"
     end
     
-    config.vm.provision "shell", path: "mongodb.sh"
-    config.vm.provision "shell", path: "sails.sh"
+    config.vm.provision "shell", path: "scripts/mongodb.sh"
+    config.vm.provision "shell", path: "scripts/sails.sh"
 
     # Register All Of The Configured Shared Folders
     settings["folders"].each do |folder|
